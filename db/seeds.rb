@@ -6,4 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-resolution1 = Resolution.create({ title: "hamster", body: "My first hamster!!!" })
+# resolution1 = Resolution.create({ title: "hamster", body: "My first hamster!!!" })
+
+resolution2 = Resolution.create({ title: "be good", body: "do good things daily" })
+
+Goal.create({ difficulty: 5, resolution: resolution2 })
+Goal.create({ difficulty: 1, resolution: resolution2 })

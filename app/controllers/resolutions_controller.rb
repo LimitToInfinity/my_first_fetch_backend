@@ -5,12 +5,14 @@ class ResolutionsController < ApplicationController
   def index
     @resolutions = Resolution.all
 
-    render json: @resolutions
+    render json: @resolutions, include: [:goals]
   end
 
   # GET /resolutions/1
   def show
-    render json: @resolution
+    @resolution = Resolution.find(params[:id])
+
+    render json: @resolution, include: [:goals]
   end
 
   # POST /resolutions
